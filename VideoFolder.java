@@ -98,6 +98,7 @@ public class VideoFolder extends AppCompatActivity {
         final LinearLayoutManager filesLm = new LinearLayoutManager(this);
         filesLm.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(lm);
+
         recyclerViewFiles.setLayoutManager(filesLm);
 
 
@@ -302,6 +303,7 @@ public class VideoFolder extends AppCompatActivity {
 
                                             videoSongsAdapter = new VideoSongsAdapter(VideoFolder.this, videoActivitySongsList);
                                             recyclerViewFiles.setAdapter(videoSongsAdapter);
+                                            folderAdapter.notifyDataSetChanged();
 
                                         } else {
 
